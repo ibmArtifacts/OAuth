@@ -1,0 +1,71 @@
+swagger: '2.0'
+info:
+  title: HelloAPI
+  x-ibm-name: helloapi
+  version: 1.0.0
+host: $(catalog.host)
+schemes:
+  - https
+basePath: /
+produces:
+  - application/json
+consumes:
+  - application/json
+security:
+  - clientIdHeader: []
+    Oauth Confidential Access Code Grant:
+      - scope1
+securityDefinitions:
+  OAuth Public Access Code Grant:
+    type: oauth2
+    flow: accessCode
+    x-ibm-oauth-provider: native-public-oauth
+    authorizationUrl: 'https://$(catalog.url)/public/oauth2/authorize'
+    tokenUrl: 'https://$(catalog.url)/public/oauth2/token'
+    scopes:
+      scope1: Sample scope description 1
+  Oauth Confidential Access Code Grant:
+    type: oauth2
+    flow: accessCode
+    x-ibm-oauth-provider: native-confidential-oauth
+    authorizationUrl: 'https://$(catalog.url)/confidential/oauth2/authorize'
+    tokenUrl: 'https://$(catalog.url)/confidential/oauth2/token'
+    scopes:
+      scope1: Sample scope description 1
+  clientIdHeader:
+    type: apiKey
+    name: client_id
+    in: query
+    x-key-type: client_id
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  assembly:
+    execute:
+      - gatewayscript:
+          version: 2.0.0
+          title: gatewayscript
+          source: |-
+            var apim = require('apim');
+
+            var vAPIName = apim.getvariable('api.name');
+
+            session.output.write('{"You_Invoked_API": "' + vAPIName + '"}');
+  phase: realized
+  gateway: datapower-api-gateway
+  type: rest
+  application-authentication:
+    certificate: false
+tags: []
+definitions: {}
+paths:
+  /hello:
+    get:
+      responses:
+        '200':
+          description: 200 OK
+      consumes: []
+      produces: []
+    parameters: []
