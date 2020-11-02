@@ -19,7 +19,8 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Basic YWRtaW46d2FzMWVkdQ=="
+								"value": "Basic YWRtaW46d2FzMWVkdQ==",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -27,11 +28,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/confidential/oauth2/authorize?response_type=code&scope=scope1&client_id={{client_id}}&redirect_uri={{redirect_uri}}",
+							"raw": "{{url}}/{{catalog}}/confidential/oauth2/authorize?response_type=code&scope={{scope}}&client_id={{client_id}}&redirect_uri={{redirect_uri}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"confidential",
 								"oauth2",
 								"authorize"
@@ -43,7 +45,7 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1"
+									"value": "{{scope}}"
 								},
 								{
 									"key": "client_id",
@@ -825,7 +827,7 @@
 							"urlencoded": [
 								{
 									"key": "code",
-									"value": "AAJSa4B5wfT-OofIVF0DbPzKtqMwHVRe428scsKjH74r-vDRhgMu1xI4KAR2-h1YKrdxZ3MgGVqWayKhY9XWP3ZkH4ekwgAo-Z0m1b10YkxdRA",
+									"value": "AAIjSg7tlJH9Sk6TV8eDh4T45LyfF1Mb_TM-pXDoucyHerVmv4vcBoIbNwayV2hbM_cH3GFZLd6vN8MiBLWyyjeC4BgfJll7s9Wg-s0kKS5YrQ",
 									"type": "text"
 								},
 								{
@@ -845,17 +847,18 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1",
+									"value": "{{scope}}",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{url}}/confidential/oauth2/token",
+							"raw": "{{url}}/{{catalog}}/confidential/oauth2/token",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"confidential",
 								"oauth2",
 								"token"
@@ -894,7 +897,7 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1",
+									"value": "{{scope}}",
 									"type": "text"
 								},
 								{
@@ -910,11 +913,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{url}}/confidential/oauth2/authorize",
+							"raw": "{{url}}/{{catalog}}/confidential/oauth2/authorize",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"confidential",
 								"oauth2",
 								"authorize"
@@ -953,17 +957,18 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1",
+									"value": "{{scope}}",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{url}}/confidential/oauth2/token",
+							"raw": "{{url}}/{{catalog}}/confidential/oauth2/token",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"confidential",
 								"oauth2",
 								"token"
@@ -1002,7 +1007,7 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1",
+									"value": "{{scope}}",
 									"type": "text"
 								},
 								{
@@ -1018,11 +1023,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{url}}/confidential/oauth2/token",
+							"raw": "{{url}}/{{catalog}}/confidential/oauth2/token",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"confidential",
 								"oauth2",
 								"token"
@@ -1066,17 +1072,18 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1",
+									"value": "{{scope}}",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{url}}/confidential/oauth2/token",
+							"raw": "{{url}}/{{catalog}}/confidential/oauth2/token",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"confidential",
 								"oauth2",
 								"token"
@@ -1173,11 +1180,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/public/oauth2/authorize?response_type=code&scope=scope1&client_id={{client_id}}&redirect_uri={{redirect_uri}}",
+							"raw": "{{url}}/{{catalog}}/public/oauth2/authorize?response_type=code&scope={{scope}}&client_id={{client_id}}&redirect_uri={{redirect_uri}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"public",
 								"oauth2",
 								"authorize"
@@ -1189,7 +1197,7 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1"
+									"value": "{{scope}}"
 								},
 								{
 									"key": "client_id",
@@ -1986,17 +1994,18 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1",
+									"value": "{{scope}}",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{url}}/public/oauth2/token",
+							"raw": "{{url}}/{{catalog}}/public/oauth2/token",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"public",
 								"oauth2",
 								"token"
@@ -2040,11 +2049,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{url}}/public/oauth2/authorize",
+							"raw": "{{url}}/{{catalog}}/public/oauth2/authorize",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"public",
 								"oauth2",
 								"authorize"
@@ -2054,7 +2064,7 @@
 					"response": []
 				},
 				{
-					"name": "pub-client-creds-grant-type",
+					"name": "pub-client-creds-grant-type (not_supported)",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -2078,17 +2088,18 @@
 								},
 								{
 									"key": "scope",
-									"value": "scope1",
+									"value": "{{scope}}",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{url}}/public/oauth2/token",
+							"raw": "{{url}}/{{catalog}}/public/oauth2/token",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"public",
 								"oauth2",
 								"token"
@@ -2138,11 +2149,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{url}}/public/oauth2/token",
+							"raw": "{{url}}/{{catalog}}/public/oauth2/token",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"{{catalog}}",
 								"public",
 								"oauth2",
 								"token"
@@ -2244,7 +2256,30 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c96625e4-6979-4e05-811a-477750beb5c3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2200aad4-48ef-4624-b348-9222355ee010",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"auth": {
@@ -2252,12 +2287,12 @@
 		"basic": [
 			{
 				"key": "password",
-				"value": "password",
+				"value": "{{password}}",
 				"type": "string"
 			},
 			{
 				"key": "username",
-				"value": "testuser",
+				"value": "{{username}}",
 				"type": "string"
 			}
 		]
@@ -2286,32 +2321,42 @@
 	],
 	"variable": [
 		{
-			"id": "5c05be45-a0b3-4313-8ea5-f3ee884b43f8",
+			"id": "c991b681-d36d-46af-9b19-05cad0cb08f9",
 			"key": "url",
-			"value": "https://<datapower_url>/<pOrg>/<catalog>"
+			"value": "https://<DP_url_here/<provider_organization>/"
 		},
 		{
-			"id": "fc65c207-9b6a-4a44-bc9f-5c298bab9818",
+			"id": "f3cf8f7c-60de-4412-a14d-6a0577f58a89",
+			"key": "catalog",
+			"value": "sandbox"
+		},
+		{
+			"id": "a70f7a4e-b3e4-488b-ace4-dc68db51440c",
+			"key": "scope",
+			"value": "scope1"
+		},
+		{
+			"id": "7a864100-62d6-4369-90ce-f737624657b8",
 			"key": "client_id",
-			"value": "3f2cc2b056ddb84c048d169f0a4ff64f"
+			"value": "4f62f2fddd533c15bed0f3dcec152ca4"
 		},
 		{
-			"id": "7cfc9b73-8011-4160-8313-9f9b7e98a6dc",
+			"id": "e1f0abf7-ca41-49b0-917f-3eb1dc4df617",
 			"key": "client_secret",
-			"value": "c048354b98f4965ff09d7d757c109c74"
+			"value": "1d7530c58579e99bf8dbe0486b67f5f8"
 		},
 		{
-			"id": "6429a310-eda7-4c18-b4cb-67bef632956d",
+			"id": "4bc94539-e326-4bd6-9c97-5378b58c5c10",
 			"key": "redirect_uri",
 			"value": "https://localhost"
 		},
 		{
-			"id": "da441ef9-d0c9-41d7-9fa2-c85fb5af9607",
+			"id": "3dd06ea2-af11-4347-b428-aafd88462e74",
 			"key": "username",
 			"value": "testuser"
 		},
 		{
-			"id": "f842165d-7917-46be-a9f4-bacac7b31a30",
+			"id": "55ed01d1-607a-4a15-bccf-5bc8959eb736",
 			"key": "password",
 			"value": "password"
 		}
